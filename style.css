@@ -1,3 +1,130 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap');
 
-font-family: 'Asap', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+@font-face {
+    font-family: 'mirage';
+    src: url(font/MADE\ Mirage\ Thin\ PERSONAL\ USE.otf);
+    font-size: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'mirage';
+    src: url(font/MADE\ Mirage\ Medium\ PERSONAL\ USE.otf);
+    font-size: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'mirage';
+    src: url(font/MADE\ Mirage\ Bold\ PERSONAL\ USE.otf);
+    font-size: normal;
+    font-weight: 600;
+}
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+:root {
+
+    --font-heading: 'Lobster', cursive;
+    --font-title: 'mirage'; 
+    --font-para: 'Asap', sans-serif;
+    --bg-header: linear-gradient(to right, rgb(0, 0, 70), rgb(28, 181, 224));
+    --clr: #fff;
+    --clr-hover: #6C6D89;
+    --trans-btn: all 0.3s linear;
+    --trans-plr: all 0.25s ease;
+    --trans-ball: all 0.2s ;
+    
+
+}
+header,
+.navbar,
+.navbar .dropdown-menu{
+    background: var(--bg-header);
+}
+.navbar .navbar-brand{
+    font-family: var(--font-title);
+    letter-spacing: 5px;
+    cursor:default;
+}
+.navbar .navbar-brand:hover{
+    color: #fff;
+}
+.navbar a,
+.navbar .dropdown-item{
+    color: var(--clr);
+    font-family: var(--font-para);
+    font-weight: 600;
+    letter-spacing: 2px;
+    
+}
+.navbar .left_div .nav-link:hover{
+    color: #c5e3f6;
+}
+.navbar .right_div .nav-link{
+    border: 1px dotted #fff;
+    margin: 2px 6px;
+    border-radius: 5px;
+}
+.navbar .right_div .nav-link.hover:hover {
+    color: var(--clr-hover);
+    background: var(--clr);
+    transition: var(--trans-btn);
+}
+
+/* navbar done  */
+
+/* .imgjumbo{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(images/cover/cover_1.jpg);
+    background-size: 100% 100%;
+} */
+a.btn {
+    color: var(--clr);
+    background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
+}
+a.btn:hover {
+    background: var(--clr);
+    color: var(--clr-hover);
+}
+section.cover .section_detail h1{
+    font-size: calc( 40px + 3.1vw);
+}
+section.cover .section_detail {}
+section.cover .section_detail {}
+section.cover .section_detail {}
+section.cover .player img{
+    width: calc(200px + 5vw) ;
+    transform: rotate(-50deg);
+}
+section.cover .ball img{
+    width: calc(20px + 2vw) ;
+}
+section.cover .ball img{
+    position: relative;
+    top: -27rem;
+    left: 12rem;
+    
+}
+section.cover:hover .player img{
+    transform: rotate(30deg);
+    transition: var(--trans-plr);
+}
+section.cover:hover .ball img{
+    animation: shoot 0.6s ease-out;
+}
+
+@keyframes shoot {
+    
+    0%{
+        transform: translate(0);
+    }
+    20%{
+        transform: translate(-7vw, 4vw);
+    }
+    100%{
+        transform: translate( 28vw, 7vw);
+    }
+}
