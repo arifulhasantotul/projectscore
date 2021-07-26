@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital@1&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @font-face {
     font-family: 'mirage';
@@ -24,11 +25,12 @@
 }
 *{
     margin: 0; padding: 0; box-sizing: border-box;
+    font-family: var(--font-heading);
 }
 
 :root {
 
-    --font-heading: 'Lobster', cursive;
+    --font-heading: 'Inter', sans-serif;
     --font-title: 'mirage'; 
     --font-para: 'Asap', sans-serif;
     --bg-header: linear-gradient(to right, rgb(0, 0, 70), rgb(28, 181, 224));
@@ -51,13 +53,16 @@ header,
 header,
 section.games,
 section.players,
-section.categories
+section.categories,
+section.number,
+section.score
 {
     margin-bottom: calc(100px + 2vw);
 }
 section.games h1,
 section.players h1,
-section.categories h1{
+section.categories h1,
+section.score h1{
     text-align: center;
     margin-bottom: calc( 50px + 2vw);
     color: var(--clr-title);
@@ -94,10 +99,10 @@ section.categories h1{
     color: var(--clr-title);
     background: var(--clr);
     transition: var(--trans-btn);
-    border: 1px solid var(--clr-title);
 }
 
 /* navbar done  */
+
 /* cover start  */
 
 a.btn {
@@ -215,9 +220,14 @@ section.players .img_jumbo .team_plr {
     display: flex;
     justify-content: center;
 }
-section.players .img_jumbo .team_plr img{
+section.players .img_jumbo .team_plr img,
+section.score .top img{
     width: calc(220px + 5vw);
 }
+
+/* jumbotorn done  */
+
+/* categories start  */
 section.categories .cate {
     font-family: var(--font-para);
 }
@@ -230,3 +240,95 @@ section.categories .cate img{
     border-radius: 10px;
     box-shadow: var(--card-shadow);
 }
+/* categories done  */
+
+/* highlights start  */
+section.highlights .left_div .card{
+    border-radius: 10px;
+    background: transparent;
+}
+section.highlights .left_div .card h5{
+    color: var(--clr-title);
+    font-size: 24px;
+}
+section.highlights .left_div .card p{
+    color: var(--clr-hover)
+}
+section.highlights .left_div img{
+    width: calc(320px + 5vw);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    /* height: 0; */
+}
+.iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+section.highlights .right_div .sports h5{
+    font-weight: bold;
+}
+section.highlights .right_div .sports{
+    color: var(--clr-title);
+    font-family: var(--font-heading);
+    display: flex;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: flex-start;
+    letter-spacing: 1px;
+    line-height: 15px;
+}
+section.highlights .right_div .post {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0;
+    margin-top: 5px;
+}
+section.highlights .right_div .post img{
+    width: 90px;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+section.highlights .right_div .post h6{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+section.highlights .right_div .post p{
+    font-size: 12px;
+    line-height: 20px;
+}
+section.highlights .right_div .post {}
+
+section.number{}
+.page-item.active .page-link {
+    z-index: 3;
+    color: #766df4;
+    background-color: var(--clr);
+    border-color: rgba(118, 109, 244, 0.35);
+    border-radius: 10px;
+}
+.page-link {
+    position: relative;
+    display: block;
+    color: var(--clr-title);
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid transparent;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+section.score .top{
+    box-shadow: var(--card-shadow);
+}
+section.number{}
