@@ -33,10 +33,13 @@
     --font-para: 'Asap', sans-serif;
     --bg-header: linear-gradient(to right, rgb(0, 0, 70), rgb(28, 181, 224));
     --clr: #fff;
+    --clr-head: rgb(0,0,70);
+    --clr-title: #4A4B65;
     --clr-hover: #6C6D89;
     --trans-btn: all 0.3s linear;
     --trans-plr: all 0.25s ease;
-    --trans-ball: all 0.2s ;
+    --trans-ball: shoot 0.6s ease-out;
+    --card-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     
 
 }
@@ -44,6 +47,21 @@ header,
 .navbar,
 .navbar .dropdown-menu{
     background: var(--bg-header);
+}
+header,
+section.games,
+section.players{
+    margin-bottom: calc(100px + 2vw);
+}
+section.games h1,
+section.players h1{
+    text-align: center;
+    margin-bottom: calc( 50px + 2vw);
+    color: var(--clr-title);
+}
+.navbar .dropdown-menu .dropdown-item:hover{
+    background: var(--clr-hover);
+    transition: var(--trans-btn);
 }
 .navbar .navbar-brand{
     font-family: var(--font-title);
@@ -70,33 +88,31 @@ header,
     border-radius: 5px;
 }
 .navbar .right_div .nav-link.hover:hover {
-    color: var(--clr-hover);
+    color: var(--clr-title);
     background: var(--clr);
     transition: var(--trans-btn);
+    border: 1px solid var(--clr-title);
 }
 
 /* navbar done  */
+/* cover start  */
 
-/* .imgjumbo{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(images/cover/cover_1.jpg);
-    background-size: 100% 100%;
-} */
 a.btn {
     color: var(--clr);
     background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
+    font-weight: 500;
 }
 a.btn:hover {
     background: var(--clr);
-    color: var(--clr-hover);
+    color: var(--clr-head);
+    border: 3px solid var(--clr-head);
+    border-radius: 3px;
 }
 section.cover .section_detail h1{
     font-size: calc( 40px + 3.1vw);
 }
-section.cover .section_detail {}
-section.cover .section_detail {}
-section.cover .section_detail {}
 section.cover .player img{
-    width: calc(200px + 5vw) ;
+    width: calc(170px + 5vw) ;
     transform: rotate(-50deg);
 }
 section.cover .ball img{
@@ -104,16 +120,15 @@ section.cover .ball img{
 }
 section.cover .ball img{
     position: relative;
-    top: -27rem;
-    left: 12rem;
-    
+    left: calc( 5rem + 5vw);
+    top: calc( -240px - 9vw);
 }
 section.cover:hover .player img{
     transform: rotate(30deg);
     transition: var(--trans-plr);
 }
 section.cover:hover .ball img{
-    animation: shoot 0.6s ease-out;
+    animation: var(--trans-ball);
 }
 
 @keyframes shoot {
@@ -127,4 +142,76 @@ section.cover:hover .ball img{
     100%{
         transform: translate( 28vw, 7vw);
     }
+}
+
+/* header end  */
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    background-image: none;
+}
+
+.carousel-control-prev-icon img, 
+.carousel-control-next-icon img {
+    width: calc( 20px + 2vw);
+}
+main article.game .card{
+    width: calc(260px + 5vw);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 7px;
+}
+main article.game .card figure{
+    position: relative;
+}
+main article.game .card .bdg{
+    position: absolute;
+    content: "";
+    top: 5%;
+    right: -2%;
+    letter-spacing: 2px;
+}
+main article.game figure figcaption{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--clr);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(36, 59, 85, 0.7));
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+main article.game figure:hover figcaption{
+    opacity: 1;
+}
+main article.game .card .card-body h4{
+    color: var(--clr-title);
+}
+main article.game .card .card-body .time{
+    color: var(--clr-hover);
+}
+
+/* jumbotron start  */
+.img_jumbo{
+
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/cover/cover_2.jpg);
+    background-size: 100%, 100%;
+}
+section.players .img_jumbo .team_plr {
+    display: flex;
+    justify-content: center;
+}
+section.players .img_jumbo .team_plr img{
+    width: calc(220px + 5vw);
 }
