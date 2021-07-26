@@ -50,11 +50,14 @@ header,
 }
 header,
 section.games,
-section.players{
+section.players,
+section.categories
+{
     margin-bottom: calc(100px + 2vw);
 }
 section.games h1,
-section.players h1{
+section.players h1,
+section.categories h1{
     text-align: center;
     margin-bottom: calc( 50px + 2vw);
     color: var(--clr-title);
@@ -214,4 +217,16 @@ section.players .img_jumbo .team_plr {
 }
 section.players .img_jumbo .team_plr img{
     width: calc(220px + 5vw);
+}
+section.categories .cate {
+    font-family: var(--font-para);
+}
+section.categories .cate h5{
+    padding: 6px 0;
+    font-weight: bold;
+}
+section.categories .cate img{
+    width: calc(100px + 5vw);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
 }
