@@ -247,6 +247,10 @@ section.highlights .left_div .card{
     border-radius: 10px;
     background: transparent;
 }
+section.highlights .left_div .card:hover {
+    box-shadow: var(--card-shadow);
+    transition: var(--trans-btn);
+}
 section.highlights .left_div .card h5{
     color: var(--clr-title);
     font-size: 24px;
@@ -309,9 +313,6 @@ section.highlights .right_div .post p{
     font-size: 12px;
     line-height: 20px;
 }
-section.highlights .right_div .post {}
-
-section.number{}
 .page-item.active .page-link {
     z-index: 3;
     color: #766df4;
@@ -331,4 +332,15 @@ section.number{}
 section.score .top{
     box-shadow: var(--card-shadow);
 }
-section.number{}
+/* main done  */
+
+/* footer start  */
+footer{
+    background: var(--clr-title);
+    color: var(--clr);
+}
+footer .contact{}
+
+footer .contact img{
+    width: 20px;
+}
