@@ -175,7 +175,7 @@ section.cover:hover .ball img{
 main article.game .card{
     width: calc(260px + 5vw);
     box-shadow: var(--card-shadow);
-    margin-bottom: 7px;
+    margin-bottom: 21px;
 }
 main article.game .card figure{
     position: relative;
@@ -354,7 +354,7 @@ footer .sub h5{
 }
 
 footer .contact p{
-    width: 20px;
+    /* padding-left: 20px; */
 }
 footer .follow{
     display: flex;
