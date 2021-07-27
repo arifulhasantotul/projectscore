@@ -38,10 +38,13 @@
     --clr-head: rgb(0,0,70);
     --clr-title: #4A4B65;
     --clr-hover: #6C6D89;
+    --clr-foot: #37384E;
+    --clr-fpara: #C3C4CA;
     --trans-btn: all 0.3s linear;
     --trans-plr: all 0.25s ease;
     --trans-ball: shoot 0.6s ease-out;
     --card-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
     
 
 }
@@ -91,9 +94,11 @@ section.score h1{
     color: #c5e3f6;
 }
 .navbar .right_div .nav-link{
-    border: 1px dotted #fff;
-    margin: 2px 6px;
-    border-radius: 5px;
+    border: 1px solid #28c7fa;
+    padding: 10px 13px;
+    font-size: 17px;
+    margin-right: 10px;
+    border-radius: 8px;
 }
 .navbar .right_div .nav-link.hover:hover {
     color: var(--clr-title);
@@ -336,11 +341,44 @@ section.score .top{
 
 /* footer start  */
 footer{
-    background: var(--clr-title);
+    background: var(--clr-foot);
+    color: var(--clr-fpara);
+    padding-top: calc(50px + 2vw);
+    padding-bottom: calc( 10px + 1vw)
+}
+footer .contact h5,
+footer .follow h5,
+footer .sub h5{
+    margin-bottom: calc(7px + 2vw);
     color: var(--clr);
 }
-footer .contact{}
 
-footer .contact img{
+footer .contact p{
     width: 20px;
+}
+footer .follow{
+    display: flex;
+    flex-direction: column;
+}
+footer .follow a{
+    padding: 10px 13px;
+    font-size: 17px;
+    margin-right: 10px;
+    color: var(--clr);
+    border: 1px solid var(--clr-hover);
+    border-radius: 8px;
+    transition: var(--trans-btn);
+}
+footer .follow a:hover{
+    color: var(--clr-title);
+    background: var(--clr);
+    
+}
+footer .sub .form-control {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+footer .sub button.btn{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
