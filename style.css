@@ -230,7 +230,22 @@ section.score .top img{
     width: calc(220px + 5vw);
 }
 
-/* jumbotorn done  */
+/* jumbotron done  */
+
+/* top score start  */
+section.score {
+    /* background: #69DDD8; */
+}
+section.players .glass .team_plr,
+section.score .top{
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+}
+/* top score end  */
 
 /* categories start  */
 section.categories .cate {
@@ -334,9 +349,7 @@ section.highlights .right_div .post p{
     border: 1px solid transparent;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-section.score .top{
-    box-shadow: var(--card-shadow);
-}
+
 /* main done  */
 
 /* footer start  */
